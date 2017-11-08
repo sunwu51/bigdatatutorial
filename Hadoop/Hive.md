@@ -19,11 +19,11 @@ select count(*) from tablename where age>20;
 - 1 将sql转化为MapReduce程序，MapReduce前面提到过逐渐被Spark等代替，以任务的形式提交程序不是实时返回结果的查询。
 - 2 写的sql其实是Hivesql，只能实现一部分sql，很多功能不支持，例如表关联，事务等等
 - 3 完全的关系型、结构化存储有更好的方案`GreenPlum`(后续文章会介绍)
-# 2 搭建
-Hive依赖于HDFS，请先完成[HDFS搭建](Hadoop.md#2.2 搭建HDFS)
-1 下载安装包并解压，配置环境变量`HIVE_HOME`为解压后的目录，并添加bin目录到PATH中
-2 安装mysql用于存储hive的元数据，同时需要将mysql的jdbc的jar放入hive的lib目录下。
-3 修改$HIVE_HOME/conf/[hive-site.xml](conf/hive-site.xml)
+# 2 搭建[2.3.0]
+Hive依赖于HDFS，请先完成[HDFS搭建](Hadoop.md#2.2 搭建HDFS)  
+1 下载安装包并解压，配置环境变量`HIVE_HOME`为解压后的目录，并添加bin目录到PATH中  
+2 安装mysql用于存储hive的元数据，同时需要将mysql的jdbc的jar放入hive的lib目录下。  
+3 修改$HIVE_HOME/conf/[hive-site.xml](conf/hive-site.xml)  
 4 初始化元数据
 ```shell
 nohup hive --service metastore &
