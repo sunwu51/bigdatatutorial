@@ -10,11 +10,11 @@ Hbase则是一种非关系型数据库，不能将现成的文件转化，而是
 # 2 搭建[1.2.6]
 Hbase依赖于HDFS，请先完成[HDFS搭建](Hadoop.md#2.2 搭建HDFS)
 这里我们搭建`单机运行`的Hbase，注意Hbase存储虽然在hdfs但是Hbase的服务器是和HDFS独立的，我们接入Hbase服务器可以查询其存在HDFS上的数据，这里并不矛盾，也就是说Hbase是单机的，HDFS是集群的这样的情况也是可以的。
-1 官网下载安装包，解压配置环境变量
-2 修改配置文件
-  [hbase-env.sh](conf/hbase-env.sh)
-  [hbase-site.xml](conf/hbase-site.xml)
-3 启动hbase
+1 官网下载安装包，解压配置环境变量  
+2 修改配置文件  
+  [hbase-env.sh](conf/hbase-env.sh)   
+  [hbase-site.xml](conf/hbase-site.xml)   
+3 启动hbase  
 ```
 start-hbase.sh
 ```
