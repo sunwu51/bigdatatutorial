@@ -32,14 +32,14 @@ ssh-keygen -trsa -P ''
 
 
 ## 2.2 搭建HDFS
-HDFS和Yarn是分开的，他们可以独立运行，没有互相依赖。例如如果不常使用Yarn，则可以只搭建HDFS。
+HDFS和Yarn是分开的，他们可以独立运行，没有互相依赖。例如如果不常使用Yarn，则可以只搭建HDFS。  
 
-1 到官网下载Hadoop安装包，并解压
-2 修改配置文件在安装包下的`etc/hadoop`目录下，主要修改四个配置文件：
- [hadoop-env.xml](conf/hadoop-env.xml)
- [core-site.xml](conf/core-site.xml)
- [hdfs-site.xml](conf/hdfs-site.xml)
- [slaves](conf/slaves)指定哪些节点作为DataNode
+1 到官网下载Hadoop安装包，并解压  
+2 修改配置文件在安装包下的`etc/hadoop`目录下，主要修改四个配置文件：  
+ [hadoop-env.xml](conf/hadoop-env.xml)  
+ [core-site.xml](conf/core-site.xml)  
+ [hdfs-site.xml](conf/hdfs-site.xml)  
+ [slaves](conf/slaves)指定哪些节点作为DataNode  
 3 初始化NameNode
 ```
 hadoop namenode -format
@@ -51,10 +51,10 @@ sbin/start-dfs.sh
 5 验证是否启动
 通过JPS查看是否有NameNode DataNode和SecondNameNode。
 ## 2.3 搭建Yarn
-如果你不确定需要Yarn，就先不用搭建Yarn等用到的时候再来搭建也不迟。
-1.修改配置文件同样在`etc/hadoop`路径下，主要修改俩文件：
- [mapred-site.xml](conf/mapred-site.xml)
- [yarn-site.xml](conf/yarn-site.xml)
+如果你不确定需要Yarn，就先不用搭建Yarn等用到的时候再来搭建也不迟。  
+1.修改配置文件同样在`etc/hadoop`路径下，主要修改俩文件：  
+ [mapred-site.xml](conf/mapred-site.xml)  
+ [yarn-site.xml](conf/yarn-site.xml)  
 2.启动yarn
 ```
 sbin/start-yarn.sh
