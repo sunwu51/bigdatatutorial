@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--配置yarn相关端口-->
+<!--下面的wy是NameNode域名-->
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+	<property>
+    	<name>yarn.resourcemanager.address</name>
+    	<value>wy:8032</value>
+ 	 </property>
+  	<property>
+    	<name>yarn.resourcemanager.scheduler.address</name>
+    	<value>wy:8030</value>
+  	</property>
+  	<property>
+    	<name>yarn.resourcemanager.resource-tracker.address</name>
+    	<value>wy:8031</value>
+  	</property>
+</configuration>

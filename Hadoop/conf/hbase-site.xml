@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--配置hbase相关内容-->
+<configuration>
+<property>
+ <name>hbase.cluster.distributed</name>
+ <value>true</value>
+</property>
+<property>
+ <name>hbase.rootdir</name>
+ <value>hdfs://wy:9000/hbase</value>
+</property>
+ <property>   
+      <name>hbase.zookeeper.property.clientPort</name>  
+      <value>2181</value>
+ </property>
+<property>  
+      <name>hbase.zookeeper.property.dataDir</name>  
+      <value>/home/frank/zookeeper</value>  
+</property>
+</configuration>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--wy是我的本机ip的域名-->
+<!--这是配置SecondNameNode也在wy这台机子上面的50090http端口可以访问-->
+<configuration>
+  <property>
+    <name>dfs.namenode.secondary.http-address</name>
+    <value>wy:50090</value>
+  </property>
+</configuration>
