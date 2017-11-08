@@ -5938,6 +5938,16 @@
     </description>
   </property>
 <!--下面是更改的配置-->
+	  <property>
+	    <name>hive.server2.thrift.client.user</name>
+	    <value>root</value>
+	    <description>Username to use against thrift client</description>
+	  </property>
+	  <property>
+	    <name>hive.server2.thrift.client.password</name>
+	    <value>mesh</value>
+	    <description>Password to use against thrift client</description>
+	  </property>
 	<property>
 	   <name>javax.jdo.option.ConnectionURL</name>
 	   <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
