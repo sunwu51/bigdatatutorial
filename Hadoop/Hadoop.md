@@ -36,7 +36,7 @@ HDFS和Yarn是分开的，他们可以独立运行，没有互相依赖。例如
 
 1 到官网下载Hadoop安装包，并解压  
 2 修改配置文件在安装包下的`etc/hadoop`目录下，主要修改四个配置文件：  
- [hadoop-env.xml](conf/hadoop-env.xml)  
+ [hadoop-env.sh](conf/hadoop-env.sh)  
  [core-site.xml](conf/core-site.xml)  
  [hdfs-site.xml](conf/hdfs-site.xml)  
  [slaves](conf/slaves)指定哪些节点作为DataNode  
