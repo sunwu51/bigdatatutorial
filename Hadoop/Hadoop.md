@@ -52,8 +52,8 @@ sbin/start-dfs.sh
 通过JPS查看是否有NameNode DataNode和SecondNameNode。
 ## 2.3 搭建Yarn
 如果你不确定需要Yarn，就先不用搭建Yarn等用到的时候再来搭建也不迟。  
-1.修改配置文件同样在`etc/hadoop`路径下，主要修改俩文件：  
- [mapred-site.xml](conf/mapred-site.xml)只有ResourceManager节点才能有这个文件  
+1.修改配置文件同样在`etc/hadoop`路径下，主要修改俩文件：   
+ [mapred-site.xml](conf/mapred-site.xml)只有ResourceManager节点才能有这个文件    
  [yarn-site.xml](conf/yarn-site.xml)  
 2.启动yarn
 ```
