@@ -6,7 +6,7 @@
 而实际场景下，我们往往会操作HDFS上的文件，而且会以集群的方式运行程序。这一节我们就来看看怎么做到这两点。
 # 2 File
 最常见的例如`sc.textFile(path)`可以读取文件内容，与之对应的`rdd.saveAsTextFile(path)`则可以将RDD存储到文件(路径已存在则报错)。但是在存储的时候只能存成块状文件，在文件块中可以拼出文件完成信息。
-![image](img/spark1.gif)
+![image](img/spark.gif)
 而读取的时候则既可以读取单个文件也可以读取块状文件。
 ![image](img/spark2.gif)
 
@@ -48,7 +48,7 @@ JavaPairRDD<IntWritable,NullWritable> pairRDD2= sc.sequenceFile("seqfile",IntWri
 chmod -R 777 /tmp/hive
 ```
 3 启动`pyspark`
-![img/spark6]
+![image](img/spark6)
 ## 3.1 Spark独立集群
 独立集群有两种角色Master和Worker，即班长和普通员工。我们在一台机子上运行的话，只能将这俩角色强加在一个人身上了。配置以下两个文件：<br>
 1 [slaves](conf/slaves)<br>
@@ -65,7 +65,7 @@ chmod -R 777 /tmp/hive
 ## 3.2 提交到独立集群运行
 1 在windows下编程,修改`setMaster`，可以直接删掉`Sparkconf`中的setMaster部分，通过运行的脚本中指定`--master`参数
 ```
-SparkConf conf = new SparkConf().setAppName("app")
+SparkConf conf = new SparkConf().setAppName("app");
 ```
 2 打jar包
 ```

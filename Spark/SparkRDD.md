@@ -1,11 +1,11 @@
 # Spark
 # 1 简介
-`Spark`的出生就是为了针对`Hadoop`的`MapReduce`计算思想，我们现在仍然能从Spark的官网首页看到一个`Spark vs Hadoop(MapRed)`的速度比较。
-![image](img/spark1.png)
+`Spark`的出生就是为了针对`Hadoop`的`MapReduce`计算思想，我们现在仍然能从Spark的官网首页看到一个`Spark vs Hadoop(MapRed)`的速度比较。<br>
+![image](img/spark1.png)  
 Spark除了速度上体现出巨大的优势，在使用上也比MapReduce更加容易，对所有的数据流程抽象除了RDD的概念。学习者只要掌握RDD的通用API就可以轻松编程。<br>
 Spark还封装了`SparkSQL`来顶替Hive中的MapReduce运算，`SparkStream`来进行流式计算，还有针对机器学习的`SparkMLib`。
 
-正因为使用简单、性能强大、涉足领域广这些特点，Spark已经是大数据分析最受欢迎的框架之一了。<br>
+正因为使用简单、性能强大、涉足领域广这些特点，Spark已经是大数据分析最受欢迎的框架之一了。<br><br>
 不过我们始终要明白一点，Hadoop没有被代替，尤其是HDFS。即使Spark有这么多优点，他也只是个计算框架，而非存储框架。仍要依赖于HDFS的分布式存储或其他存储。<br>
 之前的HDFS是部署为主，学会操作文件就够了。而Spark则需要学习使用语言进行编程。可选的语言有`Scala`,`Java`,`Python`。我以Java为主进行讲述<br>
 # 2 RDD
@@ -164,7 +164,7 @@ Double avg =(tuple2._1()*1.0)/tuple2._2();
 ### 3.2 WordCount的例子
 数每个单词出现的个数，是大数据分析的Hello World。通过前面的方法介绍，我们明显可以看出最简单的数单词就是直接调用`countByValue`方法。但是我们需要注意的是该方法是个行动操作，会将最后的结果直接返回给驱动程序，有时候我们想要的可能是将结果存储到HDFS中。<br><br>
 下面给出能实现WordCount的程序（函数式）
-```
+```java
 //!!!!!!一定注意在聚合操作之前要将聚合的KV类型提前注册如下
 static SparkConf conf = new SparkConf().setAppName("app")
 .registerKryoClasses(new Class<?>[]{
