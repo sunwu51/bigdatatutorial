@@ -48,7 +48,7 @@ JavaPairRDD<IntWritable,NullWritable> pairRDD2= sc.sequenceFile("seqfile",IntWri
 chmod -R 777 /tmp/hive
 ```
 3 启动`pyspark`
-![image](img/spark6)
+![image](img/spark6.gif)
 ## 3.1 Spark独立集群
 独立集群有两种角色Master和Worker，即班长和普通员工。我们在一台机子上运行的话，只能将这俩角色强加在一个人身上了。配置以下两个文件：<br>
 1 [slaves](conf/slaves)<br>

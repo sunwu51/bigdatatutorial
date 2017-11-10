@@ -20,6 +20,8 @@ JavaRDD<String> rdd = sc.parallelize(list);
 JavaRDD<String> rdd2=sc.textFile("/root/1.txt");
 ```
 **知识点2**：RDD是抽象的过程，即上述例子中RDD声明后，实际并不存储数据，而是代表一个过程，更像是有向无环图，封装了各种操作流程，但是实际上并没有执行操作，所以虽然在编程中可以先按照list理解但是实际上却是一片虚无，更准确的讲应该是产生我们想象的List的蓝图。<br><br>
+下图展示RDD的惰性：
+![image](img/sparksql2.gif) 
 **知识点3**：我们发现了，只要返回值还是RDD的操作（转化操作），其实都没有实际执行操作，只有返回值为实际类型的时候（行动操作）才会触发这个结果所需要的所有操作。这一点一定要理解。
 ```java
 List<Integer> list= new ArrayList<Integer>(Arrays.asList(0,1,2,3));
@@ -134,7 +136,7 @@ Double avg = (sum[0]*1.0)/count;
 这种思路和思路1 是一样的，不过不同的是这种方法是错误的，最后结果是0。原因在于`foreach`函数对每个元素执行操作是在这个元素所在的节点上面执行的。而sum数组是一个全局数据，驱动程序将全局数组和RDD操作下发给每个节点，每个节点都拿到一个sum数组的初值即{0}，节点间的变量不能共享，操作结束后也不能将变量回传，所以sum在驱动程序中的值始终为{0}。<br><br>
 从这个思路中，我们得到的启发是变量在节点间是不能共享的，RDD的函数看似是一个整体，但是RDD集合是零散的分布在多台机子上面的数据，每台机子操作自己含有的部分元素。如果是行为操作例如count函数则会每台机子对自己上面的元素求个数，最后汇总给驱动程序，驱动程序将这些值加起来作为返回值。<br><br>
 【名词解释：驱动程序，就是我们的java代码。驱动程序将序列化的RDD有向无环执行图提交给master。master从中创建任务，并将其提交给worker执行。master协调不同的工作阶段。】
-
+![image](img/sparkrdd.png)
 **正确思路**<br>
 ```java
 JavaPairRDD<Integer,Integer> pairRDD = rdd2.mapToPair(
@@ -206,5 +208,7 @@ public static void main(String[] a){
           IntWritable.class,SequenceFileOutputFormat.class);
 }          
 ```
+# 4 小结
+最初版本就有的`RDD`是经常使用的编程模型封装了很多基本的操作，在后面会提到另外两个模型`DataFrames`和`DataSet`，也有着相似的API。
 
 
