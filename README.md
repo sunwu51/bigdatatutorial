@@ -13,8 +13,8 @@
 - [2.SparkIO](Spark/SparkIO.md)
 - [3.SparkSQL](Spark/SparkSQL.md)
 - [4.SparkDataset](Spark/SparkDataset.md)
-- [3.SparkStream]()
-- [4.SparkMLib]()
+- [5.SparkStream]()
+- [6.SparkMLib]()
 ## Postgresql家族
 - 1.流式数据库[pipelinedb]()
 - 2.分布式关系型数据库[GreenPlum]()
