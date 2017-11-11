@@ -7,22 +7,36 @@
 ## Hadoop家族
 - [1.Hadoop](Hadoop/Hadoop.md)
 - [2.Hive](Hadoop/Hive.md)
-- [3.Hbase](Hadoop/Hbase.md)
+- [3.Hbase](Hadoop/Hbase.md)  
+
+[浅谈-----大数据分析的两大核心：存储构架和计算构架](Article/art1.md)  
+
 ## Spark家族
 - [1.SparkRDD](Spark/SparkRDD.md)
 - [2.SparkIO](Spark/SparkIO.md)
 - [3.SparkSQL](Spark/SparkSQL.md)
 - [4.SparkDataset](Spark/SparkDataset.md)
 - [5.SparkStream](Spark/SparkStream.md)
-- [6.SparkMLib]()
+- [6.SparkMLib]()  
+
+[浅谈-----Spark计算为什么比Hadoop快](Article/art2.md)
+
 ## Postgresql家族
 - 1.流式数据库[pipelinedb](PostgreSQL/pipelinedb.md)
-- 2.分布式关系型数据库[GreenPlum]()
+- 2.分布式关系型数据库[GreenPlum]()  
+
+[浅谈-----MPP和Hadoop的定位以及分别适合的场景]()
 ## 其他存储系统
 - [1.Ignite]()
-- [2.Redis]()
-- [3.Mongodb]()
-- [4.Cassandra]()
+- [2 Ignite与Hadoop/Spark]()
+- [3.Redis]()
+- [4.Mongodb]()
+- [5.Cassandra]()  
+
+[浅谈-----强大的功能、易于理解和上手的API 哪个更能主导兴衰]()
+
 ## 快速查询
-- [1.Presto]()
-- [2.Kylin]()
+- [1.Elasticsearch]()
+- [2.Presto]()  
+
+[浅谈----大数据分析与机器学习]()
