@@ -22,7 +22,7 @@
 
 ## Postgresql家族
 - 1.流式数据库[pipelinedb](PostgreSQL/pipelinedb.md)
-- 2.分布式关系型数据库[GreenPlum]()  
+- 2.分布式关系型数据库[GreenPlum](PostgreSQL/GPDB.md)  
 
 [扩展阅读-----MPP和Hadoop的定位以及分别适合的场景](http://www.jianshu.com/p/5191daa1a454)
 
