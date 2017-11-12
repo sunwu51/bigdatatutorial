@@ -16,8 +16,7 @@
 - [2.SparkIO](Spark/SparkIO.md)
 - [3.SparkSQL](Spark/SparkSQL.md)
 - [4.SparkDataset](Spark/SparkDataset.md)
-- [5.SparkStream](Spark/SparkStream.md)
-- [6.SparkMLib]()  
+- [5.SparkStream](Spark/SparkStream.md)   
 
 [浅谈-----Spark计算为什么比Hadoop快](Article/art2.md)
 
@@ -25,15 +24,16 @@
 - 1.流式数据库[pipelinedb](PostgreSQL/pipelinedb.md)
 - 2.分布式关系型数据库[GreenPlum]()  
 
-[浅谈-----MPP和Hadoop的定位以及分别适合的场景]()
+[扩展阅读-----MPP和Hadoop的定位以及分别适合的场景](http://www.jianshu.com/p/5191daa1a454)
+
+----
+**2017.11.12因为事务繁忙，后面的暂不更新。等以后有时间再补上**
 ## 其他存储系统
 - [1.Ignite]()
 - [2 Ignite与Hadoop/Spark]()
 - [3.Redis]()
 - [4.Mongodb]()
 - [5.Cassandra]()  
-
-[浅谈-----强大的功能、易于理解和上手的API 哪个更能主导兴衰]()
 
 ## 快速查询
 - [1.Elasticsearch]()
