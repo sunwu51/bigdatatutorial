@@ -4,6 +4,11 @@
 pipelinedb有以下特点：可以控制数据的存活周期，可以进行滑动窗口化分析，可以判断数据触发事件，提供了常用的数学分析函数。<br><br>
 [官方文档](http://docs.pipelinedb.com/)写的也非常翔实，建议阅读。
 # 2 安装与配置
+# Docker
+Docker方式是最快的安装方式，不过缺点是本机没有连接postgresql的客户端会比较难直接测试
+```
+docker run -d -p5432:5432 --name pipelinedb pipelinedb/pipelinedb
+```
 ## 2.1 下载安装
 下载页面：[https://www.pipelinedb.com/download](https://www.pipelinedb.com/download)<br>
 ubuntu下安装
