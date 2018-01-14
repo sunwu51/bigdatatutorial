@@ -153,5 +153,6 @@ Ignite提供[三种缓存模式](https://www.zybuluo.com/liyuj/note/964191#33%E7
 ./control.bat --activate
 ```
 开启磁盘持久化之后会在work目录下产生数据的文件化存储。
-持久化可以防止数据的丢失，例如两个server的集群在表中插入5个数据，关闭一个server后，数据会减少，然后再次开启，数据重新变成5条。
-![img/ignite-persist.gif]
+持久化可以防止数据的丢失，例如两个server的集群在表中插入5个数据，关闭一个server后，数据会减少，然后再次开启，数据从磁盘中restore恢复到内存重新变成5条。如下图，该场景下[配置文件](conf/ignite-persist.xml)  
+![image](img/ignite-persist.gif)
+# 5 键值对存储
