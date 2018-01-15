@@ -29,7 +29,7 @@
 ----
 **2017.11.12因为事务繁忙，后面的暂不更新。等以后有时间再补上**
 ## 其他存储系统
-- [1.Ignite]()
+- [1.Ignite](Persistence/Ignite.md)
 - [2 Ignite与Hadoop/Spark]()
 - [3.Redis]()
 - [4.Mongodb]()
