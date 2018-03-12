@@ -24,7 +24,7 @@ Hive依赖于HDFS，请先完成[HDFS搭建](Hadoop.md)
 1 下载安装包并解压，配置环境变量`HIVE_HOME`为解压后的目录，并添加bin目录到PATH中  
 2 安装mysql用于存储hive的元数据，同时需要将mysql的jdbc的jar放入hive的lib目录下。  
 3 修改$HIVE_HOME/conf/[hive-site.xml](conf/hive-site.xml)  
-在$HIVE_HOME/conf/-env.sh中也添加一行
+在$HIVE_HOME/conf/hive-env.sh中也添加一行
 ```
 export HADOOP_HOME=xxxxxxxxx
 ```
