@@ -26,15 +26,13 @@
 
 [扩展阅读-----MPP和Hadoop的定位以及分别适合的场景](http://www.jianshu.com/p/5191daa1a454)
 
-----
-**2017.11.12因为事务繁忙，后面的暂不更新。等以后有时间再补上**
 ## 其他存储系统
 - [1.Ignite](Persistence/Ignite.md)
-- [2 Ignite与Hadoop/Spark]()
-- [3.Redis]()
-- [4.Mongodb]()
+- 2 Ignite与Hadoop/Spark（还没写）
+- [3.Redis](Persistence/Redis.md)
+- [4.Mongodb](Persistence/Mongodb.md)
 - [5.Cassandra]()  
 
 ## 快速查询
-- [1.Elasticsearch]()
-- [2.Presto]()  
+- [1.Elasticsearch](Search/Elasticsearch.md)
+- [2.Presto](Search/Presto.md)  
